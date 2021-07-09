@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-replace",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Replace search occurrences with a replacement string.",
   "license": "Apache-2.0",
   "author": {
