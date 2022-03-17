@@ -49,6 +49,7 @@
     "@stdlib/process-read-stdin": "^0.0.x",
     "@stdlib/regexp-eol": "^0.0.x",
     "@stdlib/streams-node-stdin": "^0.0.x",
+    "@stdlib/string-format": "^0.0.x",
     "@stdlib/utils-escape-regexp-string": "^0.0.x",
     "@stdlib/utils-regexp-from-string": "^0.0.x"
   },
