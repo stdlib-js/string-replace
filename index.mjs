@@ -1,0 +1,4 @@
+// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import s from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-escape-regexp-string@esm/index.mjs";import e from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-function@esm/index.mjs";import{isPrimitive as r}from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-string@esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-regexp@esm/index.mjs";import i from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@esm/index.mjs";function n(n,o,d){if(!r(n))throw new TypeError(i("0hV3R",n));if(r(o))o=s(o),o=new RegExp(o,"g");else if(!t(o))throw new TypeError(i("0hVBB",o));if(!r(d)&&!e(d))throw new TypeError(i("0hVBC",d));return n.replace(o,d)}export{n as default};
+//# sourceMappingURL=index.mjs.map
