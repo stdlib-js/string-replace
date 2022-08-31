@@ -49,6 +49,7 @@
     "@stdlib/process-read-stdin": "^0.0.x",
     "@stdlib/regexp-eol": "^0.0.x",
     "@stdlib/streams-node-stdin": "^0.0.x",
+    "@stdlib/string-base-replace": "^0.0.x",
     "@stdlib/string-format": "^0.0.x",
     "@stdlib/utils-escape-regexp-string": "^0.0.x",
     "@stdlib/utils-regexp-from-string": "^0.0.x"
@@ -59,7 +60,6 @@
     "@stdlib/bench": "^0.0.x",
     "@stdlib/process-exec-path": "^0.0.x",
     "@stdlib/string-capitalize": "^0.0.x",
-    "@stdlib/string-from-code-point": "^0.0.x",
     "@stdlib/string-replace": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "proxyquire": "^2.0.0",

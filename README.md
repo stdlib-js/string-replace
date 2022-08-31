@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# Replace
+# replace
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -52,14 +52,14 @@ var replace = require( '@stdlib/string-replace' );
 
 #### replace( str, search, newval )
 
-Replaces search occurrences with a replacement `string`.
+Replaces search occurrences with a replacement string.
 
 ```javascript
 var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
 ```
 
-If provided a `function` as the [third argument][replacer], the function is invoked for each match, and the function's return value is used as the replacement `string`.
+If provided a function as the [third argument][mdn-string-replace], the function is invoked for each match, and the function's return value is used as the replacement string.
 
 ```javascript
 function replacer( match, p1 ) {
@@ -78,7 +78,7 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 
 ## Notes
 
--   The function has one notable difference from [`String.prototype.replace`][mdn]. When provided a `string` as the `search` value, the function replaces **all** occurrences. To remove only the first match, use a regular expression.
+-   The function has one notable difference from [`String.prototype.replace`][mdn-string-replace]. When provided a string as the `search` value, the function replaces **all** occurrences. To remove only the first match, use a regular expression.
 
     ```javascript
     var out = replace( 'beep', /e/, 'o' );
@@ -99,22 +99,18 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 var capitalize = require( '@stdlib/string-capitalize' );
 var replace = require( '@stdlib/string-replace' );
 
-var out;
-var str;
-
-out = replace( 'beep', 'e', 'o' );
+var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
 
 out = replace( 'Hello World', /world/i, 'Mr. President' );
 // returns 'Hello Mr. President'
 
-str = 'Oranges and lemons say the bells of St. Clement\'s';
-out = replace( str, /([^\s]*)/gi, replacer );
-// returns 'Oranges And Lemons Say The Bells Of St. Clement\'s'
-
 function replacer( match, p1 ) {
     return capitalize( p1 );
 }
+var str = 'Oranges and lemons say the bells of St. Clement\'s';
+out = replace( str, /([^\s]*)/gi, replacer );
+// returns 'Oranges And Lemons Say The Bells Of St. Clement\'s'
 ```
 
 </section>
@@ -261,9 +257,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-replace/main/LICENSE
 
-[mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-
-[replacer]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Specifying_a_function_as_a_parameter
+[mdn-string-replace]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
 
