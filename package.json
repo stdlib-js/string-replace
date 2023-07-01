@@ -50,7 +50,7 @@
     "@stdlib/regexp-eol": "^0.0.7",
     "@stdlib/streams-node-stdin": "^0.0.7",
     "@stdlib/string-base-replace": "^0.0.2",
-    "@stdlib/string-format": "^0.0.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.2",
     "@stdlib/utils-escape-regexp-string": "^0.0.9",
     "@stdlib/utils-regexp-from-string": "^0.0.9"
   },
