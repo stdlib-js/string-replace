@@ -18,25 +18,122 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # replace
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Replace search occurrences with a replacement string.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/string-replace
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var replace = require( '@stdlib/string-replace' );
+```
+
+#### replace( str, search, newval )
+
+Replaces search occurrences with a replacement string.
+
+```javascript
+var out = replace( 'beep', 'e', 'o' );
+// returns 'boop'
+```
+
+If provided a function as the [third argument][mdn-string-replace], the function is invoked for each match, and the function's return value is used as the replacement string.
+
+```javascript
+function replacer( match, p1 ) {
+    return '/' + p1 + '/';
+}
+var str = 'Oranges and lemons';
+var out = replace( str, /([^\s]+)/gi, replacer );
+// returns '/Oranges/ /and/ /lemons/'
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   The function has one notable difference from [`String.prototype.replace`][mdn-string-replace]. When provided a string as the `search` value, the function replaces **all** occurrences. To remove only the first match, use a regular expression.
+
+    ```javascript
+    var out = replace( 'beep', /e/, 'o' );
+    // returns 'boep'
+    ```
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var capitalize = require( '@stdlib/string-capitalize' );
+var replace = require( '@stdlib/string-replace' );
+
+var out = replace( 'beep', 'e', 'o' );
+// returns 'boop'
+
+out = replace( 'Hello World', /world/i, 'Mr. President' );
+// returns 'Hello Mr. President'
+
+function replacer( match, p1 ) {
+    return capitalize( p1 );
+}
+var str = 'Oranges and lemons say the bells of St. Clement\'s';
+out = replace( str, /([^\s]*)/gi, replacer );
+// returns 'Oranges And Lemons Say The Bells Of St. Clement\'s'
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -54,7 +151,7 @@ npm install -g @stdlib/string-replace-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: replace [options] [<string>] --search=<string> --newval=<string>
@@ -76,7 +173,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -96,7 +193,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ replace --search='/[eo]/' --newval=a beep
@@ -130,11 +227,6 @@ fee
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/string-replace`][@stdlib/string-replace]</span><span class="delimiter">: </span><span class="description">replace search occurrences with a replacement string.</span>
-
-
 </section>
 
 <!-- /.related -->
@@ -152,7 +244,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -175,11 +267,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/string-replace-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/string-replace-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/string-replace.svg
+[npm-url]: https://npmjs.org/package/@stdlib/string-replace
 
-[test-image]: https://github.com/stdlib-js/string-replace/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/string-replace/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/string-replace/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/string-replace/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-replace/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-replace?branch=main
