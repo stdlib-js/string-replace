@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@deno/mod.js';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.0-deno/mod.js';
 ```
 
 #### replace( str, search, newval )
@@ -92,7 +92,7 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 
 ```javascript
 import capitalize from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-capitalize@deno/mod.js';
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@deno/mod.js';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.0-deno/mod.js';
 
 var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
