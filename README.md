@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-replace/tags). For example,
+
+```javascript
 import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.0-deno/mod.js';
 ```
 
@@ -92,7 +97,7 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 
 ```javascript
 import capitalize from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-capitalize@deno/mod.js';
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.0-deno/mod.js';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@deno/mod.js';
 
 var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
