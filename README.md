@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-replace/tags). For example,
+
+```javascript
 import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.3-esm/index.mjs';
 ```
 
@@ -97,7 +102,7 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 <script type="module">
 
 import capitalize from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-capitalize@esm/index.mjs';
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.3-esm/index.mjs';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@esm/index.mjs';
 
 var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
