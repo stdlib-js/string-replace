@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@esm/index.mjs';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.3-esm/index.mjs';
 ```
 
 #### replace( str, search, newval )
@@ -97,7 +97,7 @@ var out = replace( str, /([^\s]+)/gi, replacer );
 <script type="module">
 
 import capitalize from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-capitalize@esm/index.mjs';
-import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@esm/index.mjs';
+import replace from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-replace@v0.2.3-esm/index.mjs';
 
 var out = replace( 'beep', 'e', 'o' );
 // returns 'boop'
